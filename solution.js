@@ -11,8 +11,9 @@ let password = "test";
 let isPasswordSafe = true; // ? should be = &&  ; at the end
 let errorMessages = []; // ! is not needed before =
 // Länge check -> Passwort muss mindestens 6 Buchstaben lang sein
-if (passwordlength < 6) {
-    isPasswordSafe === false;
+if (password.length < 6) {
+    //.length
+    isPasswordSafe = false; // nur ein gleichzeichen
     errorMessages.push("Password nicht lang genug"); // puh is wrong s is needed so that it is push
 }
 // Sonderzeichen check -> Passwort muss mindestens ein Sonderzeichen enthalten
@@ -25,7 +26,7 @@ if (
     !password.includes("#")
 ) {
     isPasswordSafe = false;
-    errorMessagesush("Passwort muss Sonderzeichen enthalten"); //Kein peil
+    errorMessages.push("Passwort muss Sonderzeichen enthalten"); //.push
 }
 // Bekannte Worte check -> Passwort darf keine bekannten Worte enthalten
 if ((password.indexOf("password") > 5) | (password.indexOf("123456") > 4)) {
@@ -47,4 +48,4 @@ if ((isPasswordSafe = true)) {
     console.log(errorMessages.jojo + " | "); // + nach o
 }
 // Du erschließt dir aus Fantasias Kommentaren die wahre Aufgabe des Codes und findest heraus was er tun soll. Anschließend korrigierst du Fantasias Code (Das nennt man auch refactoring) und kommentierst in jeder Zeile welche Fehler sie gemacht hat (Das nennt man code review).
-// Wenn alle Fehler beseitigt sind kannst du Fantasia auch noch Tipps für “besseren” Code geben. (bearbeitet)
+// Wenn alle Fehler beseitigt sind kannst du Fantasia auch noch Tipps für “besseren” Code geben.
