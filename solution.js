@@ -39,13 +39,13 @@ console.log(
     // . nachtragen & log klein geschrieben
     isPasswordSafe ? "Passwort ist sicher." : "Passwort ist nicht sicher!" // : anstat von else
 );
-if ((isPasswordSafe = true)) {
-    // ()= true ;
+if (isPasswordSafe) {
+    //()
     console.log("Anmeldung kann fortfahren.");
 } else {
     //{ } eintragen
     console.log("Es gab folgende Fehler:"); // () eintragen
-    console.log(errorMessages.jojo + " | "); // + nach o
+    console.log(errorMessages.join(" | ")); // join
 }
 // Du erschließt dir aus Fantasias Kommentaren die wahre Aufgabe des Codes und findest heraus was er tun soll. Anschließend korrigierst du Fantasias Code (Das nennt man auch refactoring) und kommentierst in jeder Zeile welche Fehler sie gemacht hat (Das nennt man code review).
 // Wenn alle Fehler beseitigt sind kannst du Fantasia auch noch Tipps für “besseren” Code geben.
